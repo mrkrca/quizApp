@@ -34,7 +34,9 @@ const shuffleAnswers = useRef();
             }
 
             return( <li key={answer} className="answer">
-                <button onClick={()=> handleSelectAnswer(answer)} className={cssClass}>{answer}</button>
+                <button  disabled={answerState !== ''} onClick={()=> handleSelectAnswer(answer)} className={cssClass}>{answer}
+                   
+                </button>
             </li>
             )
         }
