@@ -25,18 +25,23 @@ const shuffleAnswers = useRef();
             const isSelected = selectedAnswer === answer;
             let answerClass = ''
            
-            if( answerState === 'answered' && isSelected){
-               var cssClass = 'selected' 
+            if (answerState === 'answered' && isSelected) {
+               var cssClass = 'selected';
             }
+
 
             if((answerState === 'correct' || answerState === 'incorrect') && isSelected){
                 cssClass = answerState;
             }
 
             return( <li key={answer} className="answer">
-                <button  disabled={answerState !== ''} onClick={()=> handleSelectAnswer(answer)} className={cssClass}>{answer}
-                   
-                </button>
+                <button
+    disabled={answerState !== ''}
+    onClick={() => handleSelectAnswer(answer)}
+    className={cssClass}
+>
+    {answer}
+</button>
             </li>
             )
         }
