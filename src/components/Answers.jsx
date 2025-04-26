@@ -25,7 +25,7 @@ const shuffleAnswers = useRef();
             const isSelected = selectedAnswer === answer;
             let answerClass = ''
            
-            if( answerState === 'asnwered' && isSelected){
+            if( answerState === 'answered' && isSelected){
                var cssClass = 'selected' 
             }
 

@@ -41,7 +41,7 @@ if(answer.selectedAnswer && answer.isCorrect !== null){
 
 return (
     <div id="question">
-<QuestionTimer timeout={5000} onTimeout={onSkipAnswer} />
+<QuestionTimer timeout={10000} onTimeout={onSkipAnswer} />
 <h2>{QUESTIONS[questionIndex].text}</h2>
 <Answers
   answers={QUESTIONS[questionIndex].answers}
